@@ -1,0 +1,1823 @@
+{
+  "version": 2,
+  "meta": {
+    "node_count": 33,
+    "edge_count": 49,
+    "proximity_count": 27,
+    "generation_seed": 42,
+    "generation_config": {
+      "num_extra_objectives": 1,
+      "num_key_locks": 2,
+      "num_choke_points": 1,
+      "num_corridor_expansions": 3,
+      "corridor_length": 2,
+      "path_diversity_prob": 0.4,
+      "side_objective_prob": 0.5,
+      "min_styles": 2,
+      "leak_rate": 0.35,
+      "max_structural_iterations": 50,
+      "seed": 42
+    },
+    "evolution_seed": 42,
+    "evolution_config": {
+      "population_size": 30,
+      "num_generations": 40,
+      "tournament_size": 3,
+      "crossover_rate": 0.7,
+      "mutation_rate": 0.15,
+      "mutation_sigma": 0.12,
+      "reset_rate": 0.02,
+      "elitism_count": 2,
+      "seed": 42,
+      "patience": 20
+    },
+    "generations": 40,
+    "converged": false,
+    "target_curve": {
+      "name": "custom",
+      "points": [
+        {
+          "x": 0.0,
+          "y": 0.7
+        },
+        {
+          "x": 0.171,
+          "y": 0.004
+        },
+        {
+          "x": 0.5,
+          "y": 0.15
+        },
+        {
+          "x": 0.809,
+          "y": 0.0
+        },
+        {
+          "x": 1.0,
+          "y": 0.9
+        }
+      ]
+    },
+    "fitness": {
+      "final": 0.070848,
+      "baseline": 0.138464,
+      "improvement_pct": 48.8
+    },
+    "tension_weights": {
+      "w_patrol": 0.22,
+      "w_exposure": 0.12,
+      "w_cover": 0.12,
+      "w_node_threat": 0.13,
+      "w_cumulative": 0.12,
+      "w_lock_pressure": 0.08,
+      "w_noise": 0.05,
+      "w_ambient_audio": 0.1,
+      "w_ambient_visual": 0.06,
+      "decay_tau": 0.6,
+      "cumulative_cap": 8
+    },
+    "difficulty": 0
+  },
+  "nodes": {
+    "n_0001": {
+      "type": "entry",
+      "threat_level": "low",
+      "safe_zone": true,
+      "provides": null,
+      "size_hint": "medium",
+      "reachable_styles": [
+        "stealth"
+      ]
+    },
+    "n_0002": {
+      "type": "exit",
+      "threat_level": "variable",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "medium",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0003": {
+      "type": "transit",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "stealth"
+      ]
+    },
+    "n_0004": {
+      "type": "objective",
+      "threat_level": "high",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "large",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0005": {
+      "type": "transit",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0006": {
+      "type": "transit",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0007": {
+      "type": "high_security",
+      "threat_level": "high",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "large",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0008": {
+      "type": "transit",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0009": {
+      "type": "high_security",
+      "threat_level": "high",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "large",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0010": {
+      "type": "key_room",
+      "threat_level": "medium",
+      "safe_zone": false,
+      "provides": "K1",
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0011": {
+      "type": "key_room",
+      "threat_level": "medium",
+      "safe_zone": false,
+      "provides": "K2",
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0012": {
+      "type": "choke",
+      "threat_level": "high",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0013": {
+      "type": "observation",
+      "threat_level": "low",
+      "safe_zone": true,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0014": {
+      "type": "transit",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0015": {
+      "type": "transit",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0016": {
+      "type": "transit",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0017": {
+      "type": "transit",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0018": {
+      "type": "transit",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0019": {
+      "type": "alt_path",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0020": {
+      "type": "alt_path",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0021": {
+      "type": "alt_path",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0022": {
+      "type": "alt_path",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0023": {
+      "type": "alt_path",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0024": {
+      "type": "alt_path",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0025": {
+      "type": "alt_path",
+      "threat_level": "low",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "small",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0026": {
+      "type": "side_objective",
+      "threat_level": "medium",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "medium",
+      "reachable_styles": [
+        "stealth"
+      ]
+    },
+    "n_0027": {
+      "type": "side_objective",
+      "threat_level": "medium",
+      "safe_zone": true,
+      "provides": null,
+      "size_hint": "medium",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0028": {
+      "type": "side_objective",
+      "threat_level": "medium",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "medium",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0029": {
+      "type": "side_objective",
+      "threat_level": "medium",
+      "safe_zone": true,
+      "provides": null,
+      "size_hint": "medium",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0030": {
+      "type": "side_objective",
+      "threat_level": "medium",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "medium",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0031": {
+      "type": "side_objective",
+      "threat_level": "medium",
+      "safe_zone": false,
+      "provides": null,
+      "size_hint": "medium",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0032": {
+      "type": "side_objective",
+      "threat_level": "medium",
+      "safe_zone": true,
+      "provides": null,
+      "size_hint": "medium",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    },
+    "n_0033": {
+      "type": "side_objective",
+      "threat_level": "medium",
+      "safe_zone": true,
+      "provides": null,
+      "size_hint": "medium",
+      "reachable_styles": [
+        "hack",
+        "stealth"
+      ]
+    }
+  },
+  "edges": {
+    "e_0002": {
+      "source": "n_0001",
+      "target": "n_0003",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.9997,
+      "cover_availability": 0.0357,
+      "exposure_length": 4,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S1"
+    },
+    "e_0004": {
+      "source": "n_0004",
+      "target": "n_0005",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.2076,
+      "cover_availability": 0.8842,
+      "exposure_length": 1,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S1"
+    },
+    "e_0007": {
+      "source": "n_0006",
+      "target": "n_0007",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.0878,
+      "cover_availability": 0.8782,
+      "exposure_length": 1,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S7"
+    },
+    "e_0009": {
+      "source": "n_0005",
+      "target": "n_0008",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.009,
+      "cover_availability": 0.9672,
+      "exposure_length": 1,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S7"
+    },
+    "e_0010": {
+      "source": "n_0008",
+      "target": "n_0009",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.1566,
+      "cover_availability": 0.7443,
+      "exposure_length": 1,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S7"
+    },
+    "e_0016": {
+      "source": "n_0003",
+      "target": "n_0012",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.0369,
+      "cover_availability": 0.667,
+      "exposure_length": 3,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S6"
+    },
+    "e_0017": {
+      "source": "n_0012",
+      "target": "n_0006",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.4358,
+      "cover_availability": 0.8887,
+      "exposure_length": 3,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S6"
+    },
+    "e_0018": {
+      "source": "n_0007",
+      "target": "n_0013",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.4163,
+      "cover_availability": 0.5692,
+      "exposure_length": 2,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S3"
+    },
+    "e_0019": {
+      "source": "n_0013",
+      "target": "n_0004",
+      "locked": true,
+      "key_id": "K1",
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.1473,
+      "cover_availability": 0.9461,
+      "exposure_length": 1,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S3"
+    },
+    "e_0020": {
+      "source": "n_0009",
+      "target": "n_0014",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.2681,
+      "cover_availability": 0.4052,
+      "exposure_length": 5,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S9"
+    },
+    "e_0021": {
+      "source": "n_0014",
+      "target": "n_0002",
+      "locked": true,
+      "key_id": "K2",
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.7012,
+      "cover_availability": 0.3085,
+      "exposure_length": 4,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S9"
+    },
+    "e_0022": {
+      "source": "n_0007",
+      "target": "n_0015",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.1702,
+      "cover_availability": 0.5921,
+      "exposure_length": 3,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S9"
+    },
+    "e_0023": {
+      "source": "n_0015",
+      "target": "n_0010",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.0245,
+      "cover_availability": 0.9274,
+      "exposure_length": 1,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S9"
+    },
+    "e_0024": {
+      "source": "n_0010",
+      "target": "n_0016",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.3101,
+      "cover_availability": 0.9434,
+      "exposure_length": 1,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S9"
+    },
+    "e_0025": {
+      "source": "n_0016",
+      "target": "n_0007",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.1912,
+      "cover_availability": 0.3977,
+      "exposure_length": 2,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S9"
+    },
+    "e_0026": {
+      "source": "n_0009",
+      "target": "n_0017",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.5085,
+      "cover_availability": 0.1789,
+      "exposure_length": 2,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S9"
+    },
+    "e_0027": {
+      "source": "n_0017",
+      "target": "n_0011",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.7804,
+      "cover_availability": 0.5673,
+      "exposure_length": 1,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S9"
+    },
+    "e_0028": {
+      "source": "n_0011",
+      "target": "n_0018",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.6379,
+      "cover_availability": 0.5426,
+      "exposure_length": 3,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S9"
+    },
+    "e_0029": {
+      "source": "n_0018",
+      "target": "n_0009",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": true,
+      "patrol_density": 0.0068,
+      "cover_availability": 0.4935,
+      "exposure_length": 3,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S9"
+    },
+    "e_0030": {
+      "source": "n_0005",
+      "target": "n_0019",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "climb",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.554,
+      "cover_availability": 0.2903,
+      "exposure_length": 2,
+      "noise_level": "silent",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0031": {
+      "source": "n_0019",
+      "target": "n_0008",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "climb",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.2551,
+      "cover_availability": 0.1507,
+      "exposure_length": 4,
+      "noise_level": "silent",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0032": {
+      "source": "n_0008",
+      "target": "n_0020",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "vent",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.4587,
+      "cover_availability": 0.6749,
+      "exposure_length": 3,
+      "noise_level": "silent",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0033": {
+      "source": "n_0020",
+      "target": "n_0009",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "vent",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.5179,
+      "cover_availability": 0.5726,
+      "exposure_length": 1,
+      "noise_level": "silent",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0034": {
+      "source": "n_0003",
+      "target": "n_0021",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "hack",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.9144,
+      "cover_availability": 0.3412,
+      "exposure_length": 4,
+      "noise_level": "silent",
+      "approach_tags": [
+        "hack"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0035": {
+      "source": "n_0021",
+      "target": "n_0012",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "hack",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.425,
+      "cover_availability": 0.6811,
+      "exposure_length": 3,
+      "noise_level": "silent",
+      "approach_tags": [
+        "hack"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0036": {
+      "source": "n_0016",
+      "target": "n_0022",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "vent",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.8484,
+      "cover_availability": 0.3943,
+      "exposure_length": 1,
+      "noise_level": "silent",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0037": {
+      "source": "n_0022",
+      "target": "n_0007",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "vent",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 1.0,
+      "cover_availability": 0.7906,
+      "exposure_length": 2,
+      "noise_level": "silent",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0038": {
+      "source": "n_0017",
+      "target": "n_0023",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "climb",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.1243,
+      "cover_availability": 0.3369,
+      "exposure_length": 1,
+      "noise_level": "silent",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0039": {
+      "source": "n_0023",
+      "target": "n_0011",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "climb",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.283,
+      "cover_availability": 0.3733,
+      "exposure_length": 3,
+      "noise_level": "silent",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0040": {
+      "source": "n_0011",
+      "target": "n_0024",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "vent",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.7199,
+      "cover_availability": 0.5661,
+      "exposure_length": 5,
+      "noise_level": "silent",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0041": {
+      "source": "n_0024",
+      "target": "n_0018",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "vent",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.6354,
+      "cover_availability": 0.6052,
+      "exposure_length": 3,
+      "noise_level": "silent",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0042": {
+      "source": "n_0018",
+      "target": "n_0025",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "climb",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.5468,
+      "cover_availability": 0.3425,
+      "exposure_length": 1,
+      "noise_level": "silent",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0043": {
+      "source": "n_0025",
+      "target": "n_0009",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "climb",
+      "visibility": "hidden",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.2956,
+      "cover_availability": 0.2284,
+      "exposure_length": 4,
+      "noise_level": "silent",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S4"
+    },
+    "e_0044": {
+      "source": "n_0003",
+      "target": "n_0026",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.7373,
+      "cover_availability": 0.3969,
+      "exposure_length": 4,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0045": {
+      "source": "n_0026",
+      "target": "n_0003",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.2055,
+      "cover_availability": 0.7176,
+      "exposure_length": 4,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0046": {
+      "source": "n_0005",
+      "target": "n_0027",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.413,
+      "cover_availability": 0.88,
+      "exposure_length": 3,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0047": {
+      "source": "n_0027",
+      "target": "n_0005",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.585,
+      "cover_availability": 0.1915,
+      "exposure_length": 4,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0048": {
+      "source": "n_0006",
+      "target": "n_0028",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.375,
+      "cover_availability": 0.1154,
+      "exposure_length": 4,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0049": {
+      "source": "n_0028",
+      "target": "n_0006",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.6602,
+      "cover_availability": 0.6673,
+      "exposure_length": 2,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0050": {
+      "source": "n_0008",
+      "target": "n_0029",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.5985,
+      "cover_availability": 0.6305,
+      "exposure_length": 2,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0051": {
+      "source": "n_0029",
+      "target": "n_0008",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.4037,
+      "cover_availability": 0.1307,
+      "exposure_length": 4,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0052": {
+      "source": "n_0014",
+      "target": "n_0030",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.8829,
+      "cover_availability": 0.3439,
+      "exposure_length": 2,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0053": {
+      "source": "n_0030",
+      "target": "n_0014",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.5981,
+      "cover_availability": 0.4871,
+      "exposure_length": 2,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0054": {
+      "source": "n_0015",
+      "target": "n_0031",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.1948,
+      "cover_availability": 0.7026,
+      "exposure_length": 4,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0055": {
+      "source": "n_0031",
+      "target": "n_0015",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.8347,
+      "cover_availability": 0.4338,
+      "exposure_length": 5,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0056": {
+      "source": "n_0016",
+      "target": "n_0032",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.5948,
+      "cover_availability": 0.7276,
+      "exposure_length": 2,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0057": {
+      "source": "n_0032",
+      "target": "n_0016",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.7069,
+      "cover_availability": 0.7215,
+      "exposure_length": 2,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0058": {
+      "source": "n_0017",
+      "target": "n_0033",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.8269,
+      "cover_availability": 0.5067,
+      "exposure_length": 4,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    },
+    "e_0059": {
+      "source": "n_0033",
+      "target": "n_0017",
+      "locked": false,
+      "key_id": null,
+      "traversal_type": "normal",
+      "visibility": "obvious",
+      "one_way": false,
+      "mandatory": false,
+      "patrol_density": 0.2795,
+      "cover_availability": 0.5316,
+      "exposure_length": 2,
+      "noise_level": "low",
+      "approach_tags": [
+        "stealth"
+      ],
+      "rule_origin": "S5"
+    }
+  },
+  "proximity": {
+    "p_0001": {
+      "node_a": "n_0001",
+      "node_b": "n_0009",
+      "material": "concrete",
+      "thickness": 0.932,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.002,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0002": {
+      "node_a": "n_0001",
+      "node_b": "n_0018",
+      "material": "drywall",
+      "thickness": 0.336,
+      "separation": 0,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.213,
+      "visual_leak": 0.0,
+      "wall_type": "thin"
+    },
+    "p_0003": {
+      "node_a": "n_0001",
+      "node_b": "n_0021",
+      "material": "concrete",
+      "thickness": 0.796,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.003,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0004": {
+      "node_a": "n_0001",
+      "node_b": "n_0025",
+      "material": "concrete",
+      "thickness": 0.994,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.002,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0005": {
+      "node_a": "n_0001",
+      "node_b": "n_0026",
+      "material": "concrete",
+      "thickness": 0.875,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.003,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0006": {
+      "node_a": "n_0003",
+      "node_b": "n_0028",
+      "material": "concrete",
+      "thickness": 0.822,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.003,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0007": {
+      "node_a": "n_0004",
+      "node_b": "n_0009",
+      "material": "concrete",
+      "thickness": 0.898,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.003,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0008": {
+      "node_a": "n_0004",
+      "node_b": "n_0020",
+      "material": "concrete",
+      "thickness": 0.852,
+      "separation": 0,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.008,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0009": {
+      "node_a": "n_0004",
+      "node_b": "n_0025",
+      "material": "concrete",
+      "thickness": 0.765,
+      "separation": 3,
+      "window_count": 1,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.168,
+      "visual_leak": 0.293,
+      "wall_type": "thick"
+    },
+    "p_0010": {
+      "node_a": "n_0004",
+      "node_b": "n_0029",
+      "material": "concrete",
+      "thickness": 0.92,
+      "separation": 3,
+      "window_count": 1,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.167,
+      "visual_leak": 0.293,
+      "wall_type": "thick"
+    },
+    "p_0011": {
+      "node_a": "n_0004",
+      "node_b": "n_0032",
+      "material": "concrete",
+      "thickness": 0.844,
+      "separation": 0,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.008,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0012": {
+      "node_a": "n_0007",
+      "node_b": "n_0010",
+      "material": "concrete",
+      "thickness": 0.891,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 3,
+      "length_tiles": 20.0,
+      "sound_leak": 0.003,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0013": {
+      "node_a": "n_0007",
+      "node_b": "n_0026",
+      "material": "metal",
+      "thickness": 0.607,
+      "separation": 0,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.052,
+      "visual_leak": 0.0,
+      "wall_type": "metal"
+    },
+    "p_0014": {
+      "node_a": "n_0007",
+      "node_b": "n_0032",
+      "material": "metal",
+      "thickness": 0.595,
+      "separation": 0,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.053,
+      "visual_leak": 0.0,
+      "wall_type": "metal"
+    },
+    "p_0015": {
+      "node_a": "n_0009",
+      "node_b": "n_0029",
+      "material": "concrete",
+      "thickness": 0.775,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.003,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0016": {
+      "node_a": "n_0009",
+      "node_b": "n_0030",
+      "material": "concrete",
+      "thickness": 0.957,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.002,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0017": {
+      "node_a": "n_0012",
+      "node_b": "n_0026",
+      "material": "concrete",
+      "thickness": 0.532,
+      "separation": 0,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.015,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0018": {
+      "node_a": "n_0012",
+      "node_b": "n_0028",
+      "material": "concrete",
+      "thickness": 0.866,
+      "separation": 3,
+      "window_count": 2,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.333,
+      "visual_leak": 0.395,
+      "wall_type": "thick"
+    },
+    "p_0019": {
+      "node_a": "n_0013",
+      "node_b": "n_0025",
+      "material": "concrete",
+      "thickness": 0.972,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.002,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0020": {
+      "node_a": "n_0013",
+      "node_b": "n_0026",
+      "material": "concrete",
+      "thickness": 0.863,
+      "separation": 3,
+      "window_count": 2,
+      "window_capacity": 3,
+      "length_tiles": 20.0,
+      "sound_leak": 0.168,
+      "visual_leak": 0.395,
+      "wall_type": "thick"
+    },
+    "p_0021": {
+      "node_a": "n_0013",
+      "node_b": "n_0032",
+      "material": "concrete",
+      "thickness": 0.769,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.003,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0022": {
+      "node_a": "n_0017",
+      "node_b": "n_0018",
+      "material": "mesh",
+      "thickness": 0.292,
+      "separation": 0,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.418,
+      "visual_leak": 0.7,
+      "wall_type": "fence"
+    },
+    "p_0023": {
+      "node_a": "n_0018",
+      "node_b": "n_0021",
+      "material": "concrete",
+      "thickness": 0.98,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.002,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    },
+    "p_0024": {
+      "node_a": "n_0020",
+      "node_b": "n_0029",
+      "material": "glass",
+      "thickness": 0.174,
+      "separation": 0,
+      "window_count": 0,
+      "window_capacity": 0,
+      "length_tiles": 10.0,
+      "sound_leak": 0.102,
+      "visual_leak": 0.95,
+      "wall_type": "glass"
+    },
+    "p_0025": {
+      "node_a": "n_0021",
+      "node_b": "n_0024",
+      "material": "concrete",
+      "thickness": 0.855,
+      "separation": 3,
+      "window_count": 2,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.333,
+      "visual_leak": 0.395,
+      "wall_type": "thick"
+    },
+    "p_0026": {
+      "node_a": "n_0024",
+      "node_b": "n_0028",
+      "material": "concrete",
+      "thickness": 0.754,
+      "separation": 3,
+      "window_count": 2,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.333,
+      "visual_leak": 0.395,
+      "wall_type": "thick"
+    },
+    "p_0027": {
+      "node_a": "n_0030",
+      "node_b": "n_0033",
+      "material": "concrete",
+      "thickness": 0.828,
+      "separation": 3,
+      "window_count": 0,
+      "window_capacity": 2,
+      "length_tiles": 10.0,
+      "sound_leak": 0.003,
+      "visual_leak": 0.0,
+      "wall_type": "thick"
+    }
+  },
+  "critical_path": [
+    "n_0001",
+    "n_0003",
+    "n_0012",
+    "n_0006",
+    "n_0007",
+    "n_0013",
+    "n_0004",
+    "n_0005",
+    "n_0008",
+    "n_0009",
+    "n_0014",
+    "n_0002"
+  ],
+  "clear_conditions": {
+    "entry_node": "n_0001",
+    "exit_node": "n_0002",
+    "required_keys": [
+      "K1",
+      "K2"
+    ],
+    "objective_nodes": [
+      "n_0004"
+    ],
+    "optional_objectives": [
+      "n_0026",
+      "n_0027",
+      "n_0028",
+      "n_0029",
+      "n_0030",
+      "n_0031",
+      "n_0032",
+      "n_0033"
+    ]
+  },
+  "simulation_results": {
+    "shortest_path": {
+      "agent_type": "shortest_path",
+      "path": [
+        "n_0001",
+        "n_0003",
+        "n_0012",
+        "n_0006",
+        "n_0007",
+        "n_0015",
+        "n_0010",
+        "n_0016",
+        "n_0007",
+        "n_0013",
+        "n_0004",
+        "n_0005",
+        "n_0008",
+        "n_0009",
+        "n_0017",
+        "n_0011",
+        "n_0018",
+        "n_0009",
+        "n_0014",
+        "n_0002"
+      ],
+      "tension_trace": [
+        0.2351,
+        0.4698,
+        0.2869,
+        0.2492,
+        0.2341,
+        0.2564,
+        0.1903,
+        0.227,
+        0.3985,
+        0.2391,
+        0.2056,
+        0.1366,
+        0.0979,
+        0.2633,
+        0.3648,
+        0.3996,
+        0.4036,
+        0.3685,
+        0.3934,
+        0.5282
+      ],
+      "reached_exit": true,
+      "total_steps": 20,
+      "keys_collected": [
+        "K1",
+        "K2"
+      ]
+    },
+    "cautious": {
+      "agent_type": "cautious",
+      "path": [
+        "n_0001",
+        "n_0003",
+        "n_0012",
+        "n_0006",
+        "n_0007",
+        "n_0015",
+        "n_0010",
+        "n_0016",
+        "n_0007",
+        "n_0013",
+        "n_0004",
+        "n_0005",
+        "n_0008",
+        "n_0009",
+        "n_0017",
+        "n_0011",
+        "n_0018",
+        "n_0009",
+        "n_0014",
+        "n_0002"
+      ],
+      "tension_trace": [
+        0.2351,
+        0.4698,
+        0.2869,
+        0.2492,
+        0.2341,
+        0.2564,
+        0.1903,
+        0.227,
+        0.3985,
+        0.2391,
+        0.2056,
+        0.1366,
+        0.0979,
+        0.2633,
+        0.3648,
+        0.3996,
+        0.4036,
+        0.3685,
+        0.3934,
+        0.5282
+      ],
+      "reached_exit": true,
+      "total_steps": 20,
+      "keys_collected": [
+        "K1",
+        "K2"
+      ]
+    }
+  }
+}

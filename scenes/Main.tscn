@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bshadowprot01"]
+
+[ext_resource type="Script" uid="uid://dkkfs4tx5xacq" path="res://scripts/Main.gd" id="1_main"]
+
+[node name="Main" type="Node2D" unique_id=85911543]
+script = ExtResource("1_main")

@@ -1,0 +1,21 @@
+# ── Godot 4 编辑器缓存（含二进制 shader 缓存，体积大、换机重建） ──
+.godot/
+
+# ── Python 字节码 / 虚拟环境 ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ── 本地产物（含个人游玩记录，每次运行自动生成） ──
+play_log.json
+
+# ── 下载临时压缩包（ogg 已解压在 assets/audio/ogg/ 下） ──
+assets/audio/ogg.zip
+
+# ── 编辑器 / 系统 ──
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
