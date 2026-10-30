@@ -1,5 +1,7 @@
 # Shadow Protocol — 알고리즘 연동 게임 프레임워크
 
+한국어 | [简体中文](README.zh-CN.md)
+
 Python 레벨 생성 파이프라인의 출력을 그대로 읽어 플레이 가능한 잠입 게임으로 만드는 Godot 프로젝트.
 
 ---
